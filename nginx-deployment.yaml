@@ -5,7 +5,7 @@ metadata:
   labels:
     app: nginx-test
 spec:
-  replicas: 2
+  replicas: 6
   selector:
     matchLabels:
       app: nginx-test
@@ -21,11 +21,11 @@ spec:
         - containerPort: 80
         resources:
           requests:
-            cpu: 100m
-            memory: 200Mi
+            cpu: 200m
+            memory: 300Mi
           limits:
-            cpu: 100m
-            memory: 200Mi
+            cpu: 200m
+            memory: 300Mi
 ---
 apiVersion: v1
 kind: Service
